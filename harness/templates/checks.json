@@ -1,0 +1,11 @@
+{
+  "checks": [
+    {
+      "id": "C1",
+      "type": "row_count",
+      "why": "取得が空でないこと",
+      "file": "data/sample.csv",
+      "min": 1
+    }
+  ]
+}

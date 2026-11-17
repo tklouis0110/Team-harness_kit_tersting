@@ -1,0 +1,28 @@
+{
+  "model": "sonnet",
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Edit(./harness/**)",
+      "Edit(./.claude/**)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(rm -rf:*)"
+    ],
+    "additionalDirectories": [
+      "../team-vault"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python harness/hk.py status"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+.env
+# データそのものは GitHub に上げない（SQL・行数・ハッシュだけが _manifest.json で共有される）
+tasks/*/data/*.csv
+tasks/*/out/
+__pycache__/
+_to_delete/
